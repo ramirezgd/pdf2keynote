@@ -12,7 +12,7 @@ Install
 
 install from git::
 
-	pip install git+https://github.com/remymuller/pdf2keynote.git
+	pip install git+https://github.com/ramirezgd/pdf2keynote.git
 
 .. install for development::
 ..
