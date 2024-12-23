@@ -203,7 +203,10 @@ def pdf_to_keynote(path_to_pdf, path_to_keynote=None):
     print("reading", path_to_pdf)
     if path_to_keynote is None:
         root, ext = os.path.splitext(path_to_pdf)
-        path_to_keynote = root + ".key"
+        path_to_keynote = "'" + root + ".key" + "'"
+    else:
+        path = os.path.dirname(path_to_pdf)
+        path_to_keynote = "'" + path + "/" + path_to_keynote[0] + "'"
 
     url = NSURL.fileURLWithPath_(_s(path_to_pdf))
     pdf = PDFDocument.alloc().initWithURL_(url)
